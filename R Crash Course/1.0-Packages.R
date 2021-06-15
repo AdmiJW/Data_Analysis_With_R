@@ -33,6 +33,25 @@
 
 
 
+# ==========================
+# Native Package Management
+# ==========================
+#
+# Use install.package( <packageName> ) to install certain package. It will look it up
+# from CRAN
+#
+# Use require( <packageName> ) or library( <packageName> ) to load your package into the
+# environment. 
+# The different is:
+#   > require() does not throw error if package is not installed. Also, it gives confirmation
+#     message once loaded
+#   > library() throws error if package is not installed. Also, it does not give confirmation
+#     message
+#
+# To unload package, use detact('package:<packageName>', unload=TRUE)
+
+
+
 # To use pacman, use
 # Note this is the native way of installing packages
 install.packages('pacman')

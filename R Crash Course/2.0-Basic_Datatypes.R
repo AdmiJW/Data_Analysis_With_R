@@ -43,3 +43,23 @@ nchar("hello")
 length("hello")  # Treats as vector with 1 element only
 
 
+# To concatenate strings, one cannot use + operator. Please use paste() function which takes in
+# multiple arguments and concatenate them delimited with space (default). For no delimiter, use paste0()
+paste("Hel", "lo", " ", "Wor", "ld")
+paste0("Hel", "lo", " ", "Wor", "ld")
+
+
+
+# On the other hand, we may use cat() function
+
+
+
+# To split strings, use strsplit(), which take in arguments as follows:
+#
+#     strsplit( str, split, fixed ...)
+#
+# split is the regex used as delimiter, and fixed is boolean indicate whether delimiter is exact match or FALSE to use regex
+# Thus if you want to get the characters, use delimiter as ""
+x <- "Split this string for me please"
+strsplit(x, " ", fixed=TRUE)
+
